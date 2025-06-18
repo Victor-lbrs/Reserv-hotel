@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKY HOTEL</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-image d-flex flex-column"> <!-- ajoute la grille boostrap  -->
+  <div class="container flex-grow-1"> <!-- marge auto -->
+    <div class="row justify-content-center mt-4"> <!-- centre et marge superieur (marging top) -->
+        <div class="col-10 col-md-6"> <!-- gère l'étalement du header -->
+            <header class="bg-primary text-white text-center rounded py-3 "> <!-- fond bleu + texte blanc gras + bord arrondi + padding header (verticale) -->
+              <h1 class="fs-2">SKY hotel</h1> <!-- reduit la police du h1 (font size) -->
+               <p class="mb-0"> <!-- marge inférieur -->
+                 Indiquez vos dates de réservation - Toute annulation doit se faire 48h avant
+               </p>
+            </header>
+                </div>
+            </div>
+        </div>
+    <div class="row align-items-center justify-content-center millieu">
+         <div class="col-12 col-md-5"> <!-- replace à gauche (marging start)-->
+      <div class="p-4 rounded bloc-reserv"> 
+        <h3 class="fw-bold text-center">France - Etranger</h3> 
+        <form id="form1">
+            <div class="mb-3"> 
+                <label for="ville" class="form-label">Lieu de séjour</label> <!-- relie le label à l'id-->
+                <input type="text" class="form-control" id="ville"> <!-- zone de texte, declare l'id-->
+            </div>
+            <div class="mb-3 row">
+                <div class="col">
+                    <label for="date-arrivee" class="form-label">Arrivée</label>  
+                    <input type="date" class="form-control" id="date-arrivee"> <!-- "date" = zone calendrier-->
+                </div>
+                <div class="col">
+                    <label for="date-depart" class="form-label">Départ</label>
+                    <input type="date" class="form-control" id="date-depart">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <div class="col">
+                    <label for="adulte" class="form-label">Adulte</label>
+                    <input type="number" class="form-control" id="adulte" min="1"> <!-- zone nombre, force minimum 1-->
+                </div>
+                <div class="col">
+                    <label for="enfant" class="form-label">Enfant</label>
+                    <input type="number" class="form-control" id="enfant" min="0"> 
+                </div>
+                <div class="col">
+                    <label for="chambre" class="form-label">Chambre</label>
+                    <input type="number" class="form-control" id="chambre" min="1">
+                </div>
+            </div>
+            <div class="mb-3 d-flex gap-2"> <!-- "gap" = laisse un espace entre les enfant de la div et d flex aligne horiz-->
+                <button type="submit" class="btn btn-success flex-fill">Rechercher</button> <!-- "lexfill" = s'etale le plus possible-->
+                <button type="reset" class="btn btn-danger flex-fill">Effacer</button>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label" for="travail">Je voyage pour le travail</label>
+                <input class="form-check-input" type="checkbox" id="travail"> <!-- checkbox par défault-->
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="age1" class="form-label">Age</label>
+                    <input type="number" class="form-control" id="age1" min="18">
+                </div>
+                <div class="col">
+                    <label for="age2" class="form-label">Age</label>
+                    <input type="number" class="form-control" id="age2" min="1" max="17">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="col-12 col-md-5 ms-md-5">
+      <div class="p-4 rounded bloc-cfrm">
+        <h3 class="fw-bold text-center">Confirmation réservation</h3>
+        <p>Nombre d'adulte(s) : <span id="conf-adulte"></span></p>
+        <p>Nombre d'enfant(s) : <span id="conf-enfant"></span></p>
+        <p>Nombre de chambre(s) : <span id="conf-chambre"></span></p>
+        <p>Voyage pour le travail : <span id="conf-travail"></span></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+    <div class="container-fluid p-0"> <!-- supprime le padding -->
+        <footer class="bg-danger text-warning text-center fw-bold">
+            Indiquez vos dates de reservations - Toute annulation doit se faire avant 48h
+        </footer>
+    </div>
+<script src="script.js"></script> 
+</body>
+</html>

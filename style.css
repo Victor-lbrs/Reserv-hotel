@@ -1,0 +1,29 @@
+
+.bg-image {
+    background-image: url('images/background.webp'); 
+    background-size: cover;           
+    background-position: center;     
+    min-height: 100vh;        
+}
+
+.bloc-reserv {
+    background-color: #e1bee7;
+    color: #6c3483;
+    max-height: 80vh;    
+    overflow-y: auto; 
+}
+
+.bloc-cfrm {
+    background-color: #e1bee7;
+    color: #6c3483;
+    max-height: 80vh;    
+    overflow-y: auto; 
+}
+
+.millieu{
+    min-height: 80vh;
+}
+
+html, body { 
+    overflow-x: hidden; /*enlève une ligne blanche gênante sur le bord droit*/
+}
